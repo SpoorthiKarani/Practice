@@ -46,3 +46,32 @@ export const MemoExample2 = () => {
   return (<ParentComponent />
   );
   };
+
+ export const MemoExample3 = () => {
+    const [number, setNumber] = useState(0);
+    const [darkTheme, setDarkTheme] = useState(false);
+
+    const doubleNumber = useMemo(() => {
+      return slowFunction(number);
+    }, [number]);
+
+    const themeStyles = useMemo(() => {
+      return {
+        backgroundColor: darkTheme? 'black' : 'white',
+        color: darkTheme? 'white' : 'black'
+      }
+    }, [darkTheme]);
+
+    return(
+      <>
+        <input type="number" value={number} onChange={(e) => setNumber(e.target.value)} />
+        <button onClick={() => setDarkTheme(prevDark => !prevDark)}>Change Theme</button>
+        <div style={themeStyles}>{doubleNumber}</div>
+      </>
+    )
+ };
+
+ function slowFunction(num) {
+    for(let i =0; i<= 1000000000000; i++)
+    return num * 2;
+  }
