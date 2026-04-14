@@ -11,6 +11,11 @@ function App() {
   return (
     <>
       <h1>My App</h1>
+      <Counter/>
+      <Closure/>
+      <PromiseExample1/>
+      <CallbackExample/>
+      <MemoExample3/>
       <ThemeProvider>
       </ThemeProvider>
       <ReducerCounter />

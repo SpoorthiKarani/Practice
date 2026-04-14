@@ -1,6 +1,6 @@
 export const PromiseExample1 = () => {
     let promise = new Promise((resolve, reject) => {
-        let a = 1 + 2;
+        let a = 1 + 1;
         if (a === 2) {
             resolve("Success");
         } else {
@@ -13,6 +13,12 @@ export const PromiseExample1 = () => {
     }).catch((message) => {
         console.log("In the catch block:" + message);
     });
+
+    return (
+        <div>
+            <h2>Promise Example - check console</h2>
+        </div>
+    )
 };
 
 export const PromiseExample2 = () => {
