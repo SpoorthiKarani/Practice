@@ -7,12 +7,14 @@
 // import { ThemeProvider } from '../Day4/Context&Reducer/ThemeProvider'
 // import {ReducerCounter} from '../Day4/Context&Reducer/ReducerCounter'
 import { AsyncAwaitExample } from '../Week2/Day4'
+import { UserDashboard } from '../Week2/Day5'
 
 function App() {
   return (
     <>
       <h1>My App</h1>
       <AsyncAwaitExample />
+      <UserDashboard />
     </>
   )
 }
