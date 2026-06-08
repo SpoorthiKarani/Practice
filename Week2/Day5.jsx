@@ -34,7 +34,6 @@ export const UserDashboard = () => {
         console.log("Current filter term:", filter);
         console.log("Posts available:", posts);
         return posts.filter((p) => {
-            console.log(`Comparing "${p.title}" with "${filter}"`);
             return p.title?.toLowerCase().includes(filter.toLowerCase());
         });
     }, [filter, posts]);

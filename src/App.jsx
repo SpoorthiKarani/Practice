@@ -8,13 +8,17 @@
 // import {ReducerCounter} from '../Day4/Context&Reducer/ReducerCounter'
 import { AsyncAwaitExample } from '../Week2/Day4'
 import { UserDashboard } from '../Week2/Day5'
+import { FetchData } from '../Week3/FetchData'
+import { TabContent} from '../Week3/Tabs'
+import { MultiStepForm } from '../Week3/MultiStepForm'
 
 function App() {
   return (
     <>
       <h1>My App</h1>
-      <AsyncAwaitExample />
-      <UserDashboard />
+      <FetchData/>
+      <TabContent/>
+      <MultiStepForm/>
     </>
   )
 }
